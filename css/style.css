@@ -1,0 +1,132 @@
+.debug{
+    border: 1px solid black;
+}
+
+
+body{
+    height: 100vh;
+    background: rgb(0,152,128);
+    background: linear-gradient(180deg, rgba(0,152,128,1) 16%, rgba(2,0,36,1) 16%, rgba(221,219,210,1) 16%);;
+    position: relative;
+}
+
+
+#app{
+    width: 100%;
+    min-width: 900px;
+    min-height: 500px;
+    height: 90vh;
+    background: #ffffffc2;
+}
+
+.avatar-container{
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.avatar-container img{
+    width: 50px;
+    border-radius: 50%;
+}
+.avatar-container span{
+    font-weight:400;
+    font-size: 13px;
+}
+.avatar-container i{
+    color: #B1B1B1;
+    padding: 0 4px;
+    font-size: 20px;
+}
+.notific-alert{
+    background-color: #8EDAFC;
+    height: 60px;
+}
+.notific-symbol{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    background-color: white;
+}
+.notific-symbol i{
+    font-size: 20px;
+    color: #8EDAFC;
+}
+.notific-text p{
+    font-weight: 600;
+    font-size: 18px; 
+}
+.notific-text a{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.searchbox{
+    color: white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbox span{
+ padding: 0 15px;
+ height: 25px;
+ color: black;
+ background-color: white;
+}
+.searchbox input{
+    border: 0;
+    height: 25px;
+}
+.contacts{
+    background-color: #fff;
+    overflow-y: scroll;
+}
+ul{
+    padding-left: 0;
+    height: 70.5vh;
+    overflow-y: auto;
+}
+.contacts-img{
+    list-style-type: none;
+    padding: 10px 0;
+    border-top: 1px solid gray;
+}
+.contacts-img img{
+    width: 60px;
+    border-radius: 50%;
+}
+.name{
+    font-weight:600;
+    font-size: 20px;
+}
+.activity{
+    color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1400px){
+    .notific-text p{
+        font-weight: 600;
+        font-size: 15px; 
+    }
+    .notific-text a{
+        color: black;
+        font-size: 13px;
+    }
+}
