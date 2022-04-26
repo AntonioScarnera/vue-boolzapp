@@ -95,6 +95,10 @@ ul{
     list-style-type: none;
     padding: 10px 0;
     border-top: 1px solid gray;
+    cursor: pointer;
+}
+.contacts-img:hover{
+    background-color: #F2F2F2;
 }
 .contacts-img img{
     width: 60px;
@@ -106,6 +110,10 @@ ul{
 }
 .activity{
     color: grey;
+}
+
+.active{
+    background-color: #E9EBEB;
 }
 
 
