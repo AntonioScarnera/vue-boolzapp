@@ -61,7 +61,17 @@ body{
     justify-content: center;
     align-items: center;
 }
+.search-bar span{
+    cursor: pointer;
+    line-height:24px;
+}
+.search-bar span:hover{
+    color: green;
+}
 
+i, img{
+    cursor: pointer;
+}
 
 .contacts{
     background-color: #fff;
