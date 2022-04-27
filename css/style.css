@@ -4,49 +4,39 @@
 
 
 body{
-    height: 100vh;
+    min-height: 100vh;
     background: rgb(0,152,128);
     background: linear-gradient(180deg, rgba(0,152,128,1) 16%, rgba(2,0,36,1) 16%, rgba(221,219,210,1) 16%);;
     position: relative;
 }
-
-
-#app{
-    width: 100%;
-    min-width: 900px;
-    min-height: 500px;
-    height: 90vh;
-    background: #ffffffc2;
+.header{
+ height: 70px;
 }
-
-.avatar-container{
-    background-color: #EAEAEA;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.avatar-container img{
+.header img{
     width: 50px;
     border-radius: 50%;
 }
-.avatar-container span{
+.header span{
     font-weight:400;
-    font-size: 13px;
+    font-size: 15px;
 }
-.avatar-container i{
+.header i{
     color: #B1B1B1;
     padding: 0 4px;
     font-size: 20px;
 }
-.notific-alert{
+
+
+
+.notification{
     background-color: #8EDAFC;
-    height: 60px;
+    height: 80px;
 }
 .notific-symbol{
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    line-height: 45px;
+    line-height: 40px;
     border-radius: 50%;
     background-color: white;
 }
@@ -56,51 +46,41 @@ body{
 }
 .notific-text p{
     font-weight: 600;
-    font-size: 18px; 
+    font-size: 16px; 
 }
 .notific-text a{
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 }
 
 
-.searchbox{
-    color: white;
-    height: 40px;
+.search-bar{
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.searchbox span{
- padding: 0 15px;
- height: 25px;
- color: black;
- background-color: white;
-}
-.searchbox input{
-    border: 0;
-    height: 25px;
-}
+
+
 .contacts{
     background-color: #fff;
-    overflow-y: scroll;
+    height: calc(100% - 200px);
 }
 ul{
     padding-left: 0;
     height: 70.5vh;
     overflow-y: auto;
 }
-.contacts-img{
-    list-style-type: none;
-    padding: 10px 0;
-    border-top: 1px solid gray;
+.contacts ul li{
     cursor: pointer;
+    border: 0;
 }
-.contacts-img:hover{
+
+.contacts ul li:hover{
     background-color: #F2F2F2;
 }
-.contacts-img img{
+.list-group-item img{
     width: 60px;
     border-radius: 50%;
 }
@@ -112,8 +92,52 @@ ul{
     color: grey;
 }
 
-.active{
+.list-group-item.active{
     background-color: #E9EBEB;
+    color: black;
+}
+
+.message-container{
+    height: calc(100% - 140px);
+    background-image: url(../img/mine.jpg);
+}
+.message-text{
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+}
+.message-text span{
+    font-size: 12px;
+    color: gray;
+    text-align: end;
+}
+
+.sent{
+    background-color: #D5F9BA;
+    float: right;
+    clear: both;
+}
+.received{
+    background-color: white;
+    float: left;
+    clear: both;
+}
+
+
+
+.footer{
+    height: 70px;
+}
+.footer span{
+    padding: 10px 30px;
+}
+.footer span i{
+    padding: 3px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.footer span i:hover{
+    color: green;
 }
 
 

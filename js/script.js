@@ -174,6 +174,48 @@ const app = new Vue({
             
         ],
         activeIndex: 0,
+        searchText: '',
+        message:''
+    },
+    methods:{
+        vewChat(id){
+            const index = this.contacts.findIndex((contact)=> {
+                return contact.id === id;
+            })
+            this.activeIndex = index;
+        },
+        sendMessage(){
+            if(this.message==='' ||this.message==='  ')return
+            const newMessage = {
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                message: this.message,
+                status: 'sent'
+            }
+            const responsMessage = {
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                message: 'OK',
+                status: 'received'
+            }
+            this.contacts[this.activeIndex].messages.push(newMessage);
+            this.message = '';
+            setTimeout(()=>{
+                this.contacts[this.activeIndex].messages.push(responsMessage);
+            },2000)
+        },
+        // filterContact(){
+        //     this.contacts.forEach(contact => {
+        //         if(contact.name.toLowerCase().includes(this.searchText.toLowerCase())){
+        //             contact.visible = true;
+        //         }else{
+        //             contact.visible = false;
+        //         }
+        //     });
+        // }
+    },
+    computed: {
+        filteredContacts(){
+            return this.contacts.filter((contact)=> contact.name.toLowerCase().includes(this.searchText.toLowerCase()))
+        }
     }
 })
 
