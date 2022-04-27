@@ -175,11 +175,12 @@ const app = new Vue({
         ],
         activeIndex: 0,
         searchText: '',
-        message:''
+        message:'',
+        dropdownPopup: false,
     },
     methods:{
         vewChat(id){
-            const index = this.contacts.findIndex((contact)=> {
+            const index = this.contacts.findIndex((contact)=>{
                 return contact.id === id;
             })
             this.activeIndex = index;
@@ -202,15 +203,10 @@ const app = new Vue({
                 this.contacts[this.activeIndex].messages.push(responsMessage);
             },2000)
         },
-        // filterContact(){
-        //     this.contacts.forEach(contact => {
-        //         if(contact.name.toLowerCase().includes(this.searchText.toLowerCase())){
-        //             contact.visible = true;
-        //         }else{
-        //             contact.visible = false;
-        //         }
-        //     });
-        // }
+        popup(){
+            this.dropdownPopup = true;
+        }
+        
     },
     computed: {
         filteredContacts(){
