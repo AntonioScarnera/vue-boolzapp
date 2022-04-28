@@ -31,7 +31,7 @@
                         </div>
                     </div>
 
-                    <div class="notification d-flex align-items-center">
+                    <div class="notific d-flex align-items-center">
                         <div class="notific-symbol mx-2">
                             <i class="fa-solid fa-bell-slash"></i>
                         </div>
@@ -41,7 +41,7 @@
                         </div>
                     </div>
 
-                    <div class="search-bar">
+                    <div class="searchbox">
                         <div class="input-group  p-2">
                             <span class="input-group-text fa fa-search bg-light"></span>
                             <input type="text" class="form-control" placeholder="Search" v-model="searchText">
@@ -50,7 +50,7 @@
 
                     <div class="contacts">
                         <ul class="list-group">
-                            <li v-for="(contact, index) in filteredContacts" :key="contact.id" class="list-group-item d-flex justify-content-start align-items-center" :class="{'active' : activeIndex === index}" @click="vewChat(contact.id)"> 
+                            <li v-for="(contact, index) in filteredContacts" :key="contact.id" class="list-group-item d-flex justify-content-start align-items-center" :class="{'active' : contact.id === activeContactId}" @click="vewChat(contact.id)"> 
                                 <img class="rounded-circle" :src="'img/avatar' + contact.avatar + '.jpg'" alt="'Avatar '+contact.name">
                                 <div>
                                     <span class="name">{{contact.name}}</span>
@@ -83,7 +83,12 @@
                             <div class="p-3">
                                 <div class="d-flex justify-content-between">
                                     <span class="m-0">{{item.message}}</span>
-                                    <i class="fa-solid fa-angle-down"></i>
+                                    <span class="dropdown-message" @click="item.display = !item.display">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                        <ul class="info-message" :class="{'d-block' : item.display}">
+                                            <li @click="deleteMessage(index)">Elimina messaggio</li>
+                                       </ul>
+                                    </span>
                                 </div>
                                 <span class="d-block msg-date">{{item.date}}</span>
                             </div>

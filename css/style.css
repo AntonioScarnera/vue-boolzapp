@@ -34,7 +34,7 @@
 
 
 
-.notification{
+.notific{
     background-color: #8EDAFC;
     height: 80px;
 }
@@ -61,17 +61,17 @@
 }
 
 
-.search-bar{
+.searchbox{
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.search-bar span{
+.searchbox span{
     cursor: pointer;
     line-height:24px;
 }
-.search-bar span:hover{
+.searchbox span:hover{
     color: green;
 }
 
@@ -84,7 +84,7 @@ i, img{
     height: calc(100% - 200px);
     overflow-y: auto;
 }
-ul{
+.contacts ul{
     padding-left: 0;
     height: 70.5vh;
 }
@@ -150,6 +150,41 @@ ul{
     float: left;
     clear: both;
 }
+
+
+
+.message-text .dropdown-message{
+    position: absolute;
+    right: 1rem;
+    display: block;
+    font-size: 1.2rem;
+}
+
+/* info message */
+
+.info-message{
+    width: 232px;
+    background-color: #fff;
+    list-style-type: none;
+    padding-left: 0;
+    position: absolute;
+    right: 0;
+    margin-top: 20px;
+    z-index: 1;
+    display: none;
+    border-radius: 10px;
+}
+
+.info-message li{
+    padding: 0.5rem 1rem;
+}
+.info-message li:hover{
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+
+
 
 
 
